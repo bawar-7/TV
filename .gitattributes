@@ -1,0 +1,4 @@
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+# Preserve the upstream font license verbatim, including its original whitespace.
+launcher/app/src/main/assets/Outfit-OFL.txt -whitespace

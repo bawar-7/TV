@@ -1,0 +1,8 @@
+**/build/
+.gradle/
+local.properties
+*.keystore
+install-check/out/
+install-check/*.apk
+install-check/*.idsig
+dist/
