@@ -1,0 +1,2 @@
+2d21ed24d619fb052214b45118250636fa79310bab4d433bb7ac6f0dc390fd05  cleanyourtv-default.apk
+027e60d373063b7bfea46af87d60f5bee52b2f2accca84ef3b0805be28115d80  cleanyourtv-default.json

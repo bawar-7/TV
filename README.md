@@ -39,15 +39,15 @@ Inspect a screenshot after each meaningful change. Protected playback and HDMI m
 
 `tools/install-launcher.ps1` automates installing and opening without changing Home. Pass `-AdbPath` and `-ApkPath` when needed. These PowerShell scripts have not been executed in the Linux cloud environment; use the manual path above initially.
 
-## Home handover — only after functional checks pass
+## Home limitation confirmed on this TV
 
-```powershell
-.\adb.exe shell cmd package set-home-activity --user 0 dev.bawar.tv.launcher/.HomeActivity
-.\adb.exe shell input keyevent HOME
-.\adb.exe shell dumpsys activity activities | Select-String 'mFocusedApp|topResumedActivity'
-```
+Quiet TV installed and rendered correctly; the owner reported its functional checks passed. Assigning it as Home returned `Success` and the Home picker showed Quiet TV selected, but both the focused activity and HOME resolution remained Google TV. Disabling Google TV then caused a freeze. Re-enabling and explicitly opening Google TV restored normal operation, confirmed by the owner.
 
-Confirm both the focused activity and visible screen are Quiet TV, then test the real Home button. `Success` alone does not prove takeover. Keep Google TV enabled, reboot once, reconnect and repeat the checks. If Google TV or recovery still takes Home, stop and share the result rather than disabling either package. No remote-key helper is installed.
+Keep Google TV and setupwraith enabled. Some saved Wi-Fi entries belong to setupwraith. Do not repeat the launcher-disable experiment. Open Quiet TV explicitly as described above; automatic Home replacement remains unresolved. No remote-key helper is installed.
+
+## CleanYourTV default theme
+
+The separate upstream CleanYourTV launcher and exact default theme are available in [downloads/CLEANYOURTV.md](downloads/CLEANYOURTV.md). They do not overwrite Quiet TV or change default Home. Keep the stock launcher enabled and follow the manual installation and screenshot checks there.
 
 ## Customize and navigate
 
